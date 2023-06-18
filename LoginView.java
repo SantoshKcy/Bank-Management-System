@@ -1,15 +1,9 @@
 
 package VIEW;
-//import java.sql.*;
-//import java.sql.Statement;
-//import javax.swing.*;
 import javax.swing.JOptionPane;
-//import java.sql.Connection;
-//import java.sql.DriverManager;
 import java.awt.Image;
 import java.awt.Toolkit;
 import javax.swing.ImageIcon;
-//import java.sql.ResultSet;
 import MODEL.*;
 import CONTROLLER.*;
 public class LoginView extends javax.swing.JFrame {
@@ -23,7 +17,7 @@ public class LoginView extends javax.swing.JFrame {
         jLabel1.setIcon(i);
     }
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
     private void initComponents() {
 
         btnnewadm = new javax.swing.JButton();
@@ -132,15 +126,15 @@ public class LoginView extends javax.swing.JFrame {
 
         pack();
         setLocationRelativeTo(null);
-    }// </editor-fold>//GEN-END:initComponents
+    }// </editor-fold>                        
 
-    private void txtusernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtusernameActionPerformed
+    private void txtusernameActionPerformed(java.awt.event.ActionEvent evt) {                                            
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtusernameActionPerformed
+    }                                           
 
-    private void txtpasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtpasswordActionPerformed
+    private void txtpasswordActionPerformed(java.awt.event.ActionEvent evt) {                                            
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtpasswordActionPerformed
+    }                                           
 
     public loginmodel getMymodel()
     {
@@ -151,27 +145,25 @@ public class LoginView extends javax.swing.JFrame {
     {
         JOptionPane.showMessageDialog(this,msg);
     }
-    private void btnloginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnloginActionPerformed
+    private void btnloginActionPerformed(java.awt.event.ActionEvent evt) {                                         
        if(txtprivacy_policy.isSelected()&&txtterms_conditions.isSelected()){   
            logincontroller l=new logincontroller(this);
-//           l.setVisible(true
-
         }
         else{
           System.out.println("wrong");
           JOptionPane.showMessageDialog(this,"WRONG USERNAME OR PASSWORD AND AGREE CONDITIONS", "ERROR", JOptionPane.INFORMATION_MESSAGE);
         }             
-    }//GEN-LAST:event_btnloginActionPerformed
+    }                                        
 
-    private void txtprivacy_policyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtprivacy_policyActionPerformed
+    private void txtprivacy_policyActionPerformed(java.awt.event.ActionEvent evt) {                                                  
 
-    }//GEN-LAST:event_txtprivacy_policyActionPerformed
+    }                                                 
 
-    private void btnnewadmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnnewadmActionPerformed
+    private void btnnewadmActionPerformed(java.awt.event.ActionEvent evt) {                                          
         NewAdminview s=new NewAdminview();
             s.setVisible(true);
             this.hide();
-    }//GEN-LAST:event_btnnewadmActionPerformed
+    }                                         
 
     public static void main(String args[]) {
         try {
@@ -190,10 +182,6 @@ public class LoginView extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(LoginView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new LoginView().setVisible(true);
@@ -201,7 +189,7 @@ public class LoginView extends javax.swing.JFrame {
         });
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+    // Variables declaration - do not modify                     
     private javax.swing.JButton btnlogin;
     private javax.swing.JButton btnnewadm;
     private javax.swing.JLabel jLabel1;
@@ -214,5 +202,5 @@ public class LoginView extends javax.swing.JFrame {
     private javax.swing.JCheckBox txtprivacy_policy;
     private javax.swing.JCheckBox txtterms_conditions;
     private javax.swing.JTextField txtusername;
-    // End of variables declaration//GEN-END:variables
+    // End of variables declaration                   
  }
