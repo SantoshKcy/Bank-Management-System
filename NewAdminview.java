@@ -1,8 +1,5 @@
 
 package VIEW;
-import MODEL.DataConnection;
-//import java.sql.Connection;
-//import java.sql.Statement;
 import javax.swing.JOptionPane;
 import java.awt.Color;
 import java.awt.Font;
@@ -13,10 +10,6 @@ import javax.swing.JTextField;
 import MODEL.*;
 import CONTROLLER.*;
 import java.awt.event.ActionListener;
-import java.sql.Connection;
-//ResultSet rs;
-//PreparedStatement pst=null;
-
 public class NewAdminview extends javax.swing.JFrame {
     NewAdminmodel model1;
     public NewAdminview() {
@@ -26,29 +19,12 @@ public class NewAdminview extends javax.swing.JFrame {
         Image img2=img1.getScaledInstance(jLabel1.getWidth(),jLabel1.getHeight(),Image.SCALE_SMOOTH);
         ImageIcon i = new ImageIcon(img2);
         jLabel1.setIcon(i);
-//        addPlaceholderstyle(txteid);
         addPlaceholderstyle(txtefname);
         addPlaceholderstyle(txtelname);
         addPlaceholderstyle(txtephone);
         addPlaceholderstyle(txteemail);
-        addPlaceholderstyle(txtepassword);
-        
+        addPlaceholderstyle(txtepassword); 
     }
-//    private void idautoincrement(){
-//    try{
-//        Connection conn= DataConnection.dbconnect();
-//        String sqlquery="select idno from e_info order by empid desc limit l";
-//        pst=conn.prepareStatement(sqlquery);
-//        rs= pst.executeQuery();
-//        if(rs.next()){
-//            int id = rs.getInt(l);
-//            int n = id+l;
-//            txtid.setText(Integer.toString(n))
-//        }
-//    }
-//    catch(Exception e){
-//    }
-//    }
     public void addPlaceholderstyle (JTextField textField) { 
      Font font =textField.getFont();
      font =font.deriveFont (Font.ITALIC); 
@@ -62,7 +38,7 @@ public class NewAdminview extends javax.swing.JFrame {
     textField.setForeground (Color.black);
         } //font color
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
     private void initComponents() {
 
         txtefname = new javax.swing.JTextField();
@@ -70,7 +46,6 @@ public class NewAdminview extends javax.swing.JFrame {
         txtephone = new javax.swing.JTextField();
         txteemail = new javax.swing.JTextField();
         txtepassword = new javax.swing.JTextField();
-        txtid = new javax.swing.JTextField();
         btnregister = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
@@ -162,23 +137,12 @@ public class NewAdminview extends javax.swing.JFrame {
         });
         getContentPane().add(txtepassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 330, 250, 30));
 
-        txtid.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtidActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txtid, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 130, -1, -1));
-
         btnregister.setBackground(new java.awt.Color(223, 224, 229));
         btnregister.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         btnregister.setForeground(new java.awt.Color(255, 255, 255));
         btnregister.setText("REGISTER");
         btnregister.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
         btnregister.setContentAreaFilled(false);
-        btnregister.setDoubleBuffered(true);
-        btnregister.setFocusTraversalPolicyProvider(true);
-        btnregister.setFocusable(false);
-        btnregister.setHideActionText(true);
         btnregister.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnregisterActionPerformed(evt);
@@ -214,11 +178,11 @@ public class NewAdminview extends javax.swing.JFrame {
 
         pack();
         setLocationRelativeTo(null);
-    }// </editor-fold>//GEN-END:initComponents
+    }// </editor-fold>                        
 
-    private void txtephoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtephoneActionPerformed
+    private void txtephoneActionPerformed(java.awt.event.ActionEvent evt) {                                          
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtephoneActionPerformed
+    }                                         
 
     public NewAdminmodel getMymodel()
     {
@@ -233,114 +197,101 @@ public class NewAdminview extends javax.swing.JFrame {
 {
     btnregister.addActionListener(log);
 }
-    private void btnregisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnregisterActionPerformed
-//       Connection conn= DataConnection.dbconnect();
-//   try
-//   {
-//       Statement stmt =conn.createStatement();
-//       String sql ="insert into e_info values('"+txteid.getText()+"','"+txtefname.getText()+"','"+txtelname.getText()+"','"+txtephone.getText()+"','"+txteemail.getText()+"','"+txtepassword.getText()+"')";
-//       stmt.executeUpdate(sql);
-//       System.out.println("data inserted");
-//       JOptionPane.showMessageDialog(this,"SUCCESSFULLY REGISTERED", "EMPLOYEE", JOptionPane.INFORMATION_MESSAGE);
-//       
-//    }                                           
-//    catch(Exception e)
-//         {
-//             System.out.println(e.getMessage());
-//             
-//         }
+    private void btnregisterActionPerformed(java.awt.event.ActionEvent evt) {                                            
     NewAdmincontroller na= new NewAdmincontroller(this);
+    }                                           
 
-    }//GEN-LAST:event_btnregisterActionPerformed
-
-    private void txtefnameFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtefnameFocusGained
+    private void txtefnameFocusGained(java.awt.event.FocusEvent evt) {                                      
         if(txtefname.getText().equals("FIRST NAME")){
            txtefname.setText(null);
            txtefname.requestFocus();
            //remove placeholder style
            removePlaceholderStyle(txtefname);
        }
-    }//GEN-LAST:event_txtefnameFocusGained
+    }                                     
 
-    private void txtelnameFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtelnameFocusGained
+    private void txtelnameFocusGained(java.awt.event.FocusEvent evt) {                                      
         if(txtelname.getText().equals("LAST NAME")){
            txtelname.setText(null);
            txtelname.requestFocus();
            //remove placeholder style
            removePlaceholderStyle(txtelname);
        }        // TODO add your handling code here:
-    }//GEN-LAST:event_txtelnameFocusGained
+    }                                     
 
-    private void txtephoneFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtephoneFocusGained
+    private void txtephoneFocusGained(java.awt.event.FocusEvent evt) {                                      
     if(txtephone.getText().equals("PHONE NO")){
            txtephone.setText(null);
            txtephone.requestFocus();
            //remove placeholder style
            removePlaceholderStyle(txtephone);
        }        // TODO add your handling code here:
-    }//GEN-LAST:event_txtephoneFocusGained
+    }                                     
 
-    private void txteemailFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txteemailFocusGained
+    private void txteemailFocusGained(java.awt.event.FocusEvent evt) {                                      
     if(txteemail.getText().equals("E-MAIL ADDRESS")){
            txteemail.setText(null);
            txteemail.requestFocus();
            //remove placeholder style
            removePlaceholderStyle(txteemail);
        }        // TODO add your handling code here:
-    }//GEN-LAST:event_txteemailFocusGained
+    }                                     
 
-    private void txtepasswordFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtepasswordFocusGained
+    private void txtepasswordFocusGained(java.awt.event.FocusEvent evt) {                                         
     if(txtepassword.getText().equals("PASSWORD")){
            txtepassword.setText(null);
            txtepassword.requestFocus();
            //remove placeholder style
            removePlaceholderStyle(txtepassword);
        }        // TODO add your handling code here:
-    }//GEN-LAST:event_txtepasswordFocusGained
+    }                                        
 
-    private void txtefnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtefnameActionPerformed
+    private void txtefnameActionPerformed(java.awt.event.ActionEvent evt) {                                          
 
-    }//GEN-LAST:event_txtefnameActionPerformed
+    }                                         
+    public void resetme(){
+    txtefname.setText("");
+    txtepassword.setText(" ");
+    txteemail.setText(" ");
+    txtelname.setText(" ");
+    txtephone.setText(" ");
+    }
 
-    private void txtefnameFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtefnameFocusLost
+    private void txtefnameFocusLost(java.awt.event.FocusEvent evt) {                                    
     if(txtefname.getText().length()==0){
         addPlaceholderstyle(txtefname);
         txtefname.setText("FIRST NAME");    
         }
-    }//GEN-LAST:event_txtefnameFocusLost
+    }                                   
 
-    private void txtelnameFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtelnameFocusLost
+    private void txtelnameFocusLost(java.awt.event.FocusEvent evt) {                                    
     if(txtelname.getText().length()==0){
         addPlaceholderstyle(txtelname);
         txtelname.setText("LAST NAME");    
-        }    }//GEN-LAST:event_txtelnameFocusLost
+        }    }                                   
 
-    private void txtephoneFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtephoneFocusLost
+    private void txtephoneFocusLost(java.awt.event.FocusEvent evt) {                                    
 if(txtephone.getText().length()==0){
         addPlaceholderstyle(txtephone);
         txtephone.setText("PHONE NO");    
-        }    }//GEN-LAST:event_txtephoneFocusLost
+        }    }                                   
 
-    private void txteemailFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txteemailFocusLost
+    private void txteemailFocusLost(java.awt.event.FocusEvent evt) {                                    
 if(txteemail.getText().length()==0){
         addPlaceholderstyle(txteemail);
         txteemail.setText("E-MAIL ADDRESS");    
-        }    }//GEN-LAST:event_txteemailFocusLost
+        }    }                                   
 
-    private void txtepasswordFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtepasswordFocusLost
+    private void txtepasswordFocusLost(java.awt.event.FocusEvent evt) {                                       
 if(txtepassword.getText().length()==0){
         addPlaceholderstyle(txtepassword);
         txtepassword.setText("PASSWORD");    
-        }    }//GEN-LAST:event_txtepasswordFocusLost
+        }    }                                      
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
     LoginView s=new LoginView();
             s.setVisible(true);
-            this.hide();    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void txtidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtidActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtidActionPerformed
+            this.hide();    }                                        
 
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -350,7 +301,7 @@ if(txtepassword.getText().length()==0){
         });
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+    // Variables declaration - do not modify                     
     private javax.swing.JButton btnregister;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
@@ -361,6 +312,5 @@ if(txtepassword.getText().length()==0){
     private javax.swing.JTextField txtelname;
     private javax.swing.JTextField txtepassword;
     private javax.swing.JTextField txtephone;
-    private javax.swing.JTextField txtid;
-    // End of variables declaration//GEN-END:variables
+    // End of variables declaration                   
 }
