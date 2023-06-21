@@ -14,7 +14,7 @@ public class CREATEACC extends javax.swing.JFrame {
         txtdate.setText(formattedDate);
     }
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents 
     private void initComponents() {
 
         typ_acc = new javax.swing.ButtonGroup();
