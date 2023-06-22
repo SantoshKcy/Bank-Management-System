@@ -17,7 +17,7 @@ public class LoginView extends javax.swing.JFrame {
         jLabel1.setIcon(i);
     }
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         btnnewadm = new javax.swing.JButton();
@@ -126,15 +126,15 @@ public class LoginView extends javax.swing.JFrame {
 
         pack();
         setLocationRelativeTo(null);
-    }// </editor-fold>                        
+    }// </editor-fold>//GEN-END:initComponents
 
-    private void txtusernameActionPerformed(java.awt.event.ActionEvent evt) {                                            
+    private void txtusernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtusernameActionPerformed
         // TODO add your handling code here:
-    }                                           
+    }//GEN-LAST:event_txtusernameActionPerformed
 
-    private void txtpasswordActionPerformed(java.awt.event.ActionEvent evt) {                                            
+    private void txtpasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtpasswordActionPerformed
         // TODO add your handling code here:
-    }                                           
+    }//GEN-LAST:event_txtpasswordActionPerformed
 
     public loginmodel getMymodel()
     {
@@ -145,7 +145,7 @@ public class LoginView extends javax.swing.JFrame {
     {
         JOptionPane.showMessageDialog(this,msg);
     }
-    private void btnloginActionPerformed(java.awt.event.ActionEvent evt) {                                         
+    private void btnloginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnloginActionPerformed
        if(txtprivacy_policy.isSelected()&&txtterms_conditions.isSelected()){   
            logincontroller l=new logincontroller(this);
         }
@@ -153,17 +153,17 @@ public class LoginView extends javax.swing.JFrame {
           System.out.println("wrong");
           JOptionPane.showMessageDialog(this,"WRONG USERNAME OR PASSWORD AND AGREE CONDITIONS", "ERROR", JOptionPane.INFORMATION_MESSAGE);
         }             
-    }                                        
+    }//GEN-LAST:event_btnloginActionPerformed
 
-    private void txtprivacy_policyActionPerformed(java.awt.event.ActionEvent evt) {                                                  
+    private void txtprivacy_policyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtprivacy_policyActionPerformed
 
-    }                                                 
+    }//GEN-LAST:event_txtprivacy_policyActionPerformed
 
-    private void btnnewadmActionPerformed(java.awt.event.ActionEvent evt) {                                          
+    private void btnnewadmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnnewadmActionPerformed
         NewAdminview s=new NewAdminview();
             s.setVisible(true);
             this.hide();
-    }                                         
+    }//GEN-LAST:event_btnnewadmActionPerformed
 
     public static void main(String args[]) {
         try {
@@ -189,7 +189,7 @@ public class LoginView extends javax.swing.JFrame {
         });
     }
 
-    // Variables declaration - do not modify                     
+    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnlogin;
     private javax.swing.JButton btnnewadm;
     private javax.swing.JLabel jLabel1;
@@ -202,5 +202,5 @@ public class LoginView extends javax.swing.JFrame {
     private javax.swing.JCheckBox txtprivacy_policy;
     private javax.swing.JCheckBox txtterms_conditions;
     private javax.swing.JTextField txtusername;
-    // End of variables declaration                   
+    // End of variables declaration//GEN-END:variables
  }
